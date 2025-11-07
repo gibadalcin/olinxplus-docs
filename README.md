@@ -257,7 +257,7 @@ Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para ma
 
 ## 👥 Time
 
-Desenvolvido por [Seu Nome/Empresa]
+Desenvolvido por Olinx Digital 2025
 
 ## 📞 Suporte
 
