@@ -268,7 +268,7 @@ Crie uma service account no GCP (IAM & Admin → Service Accounts) com permissõ
 #### MongoDB Atlas
 Configure a connection string no `.env` do backend:
 ```env
-MONGODB_URL=mongodb+srv://usuario:senha@cluster.mongodb.net/olinxplus
+MONGODB_URL=mongodb+srv://<username>:<password>@<cluster>.mongodb.net/olinxplus
 ```
 
 #### Digital Ocean (Deploy Backend)
