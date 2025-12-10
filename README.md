@@ -45,7 +45,7 @@
 - 🏷️ **Gestão de Logos**: Upload e indexação de logos de marcas para reconhecimento visual
 
 ### Para Usuários Finais (Mobile App)
-- 📷 **Captura Inteligente**: Detecção automática de logos através da câmera
+- 📷 **Captura Manual com Guias**: Marcadores visuais para enquadramento e botão de captura
 - 🔍 **Reconhecimento Visual**: Busca por similaridade usando CLIP e FAISS
 - 🌟 **Visualização AR**: Experiência de realidade aumentada com modelos 3D
 - 📍 **Conteúdo Contextual**: Exibição de conteúdo baseado em localização e marca
