@@ -300,7 +300,7 @@ faiss-cpu>=1.8.0
 ## 📚 Documentação Relacionada
 
 - [THRESHOLD_CALIBRATION.md](./THRESHOLD_CALIBRATION.md) - Calibração de thresholds
-- [olinxplus-backend/docs/CROP-OPTIMIZATION.md](https://github.com/gibadalcin/olinxplus-backend/blob/main/docs/CROP-OPTIMIZATION.md) - Otimizações backend
+- [olinxplus-backend/docs/CROP-OPTIMIZATION.md](https://github.com/gibadalcin/olinxplus-backend/blob/master/docs/CROP-OPTIMIZATION.md) - Otimizações backend
 
 ---
 

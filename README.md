@@ -146,7 +146,7 @@ olinxplus-adminui/       # 🎨 Admin Dashboard (React + Vite)
 └── public/
 
 olinxplus-backend/       # ⚡ API Backend (FastAPI + Python)
-├── main.py              # Entrypoint da API (4146 linhas)
+├── master.py              # Entrypoint da API (4146 linhas)
 ├── schemas.py           # Modelos Pydantic
 ├── firebase_utils.py    # Firebase Authentication
 ├── gcs_utils.py         # Google Cloud Storage
@@ -241,7 +241,7 @@ pip install -r requirements.txt
 # - firebase-cred.json (Firebase Admin)
 # - cloud-storage-cred.json (Google Cloud Storage)
 # - .env com parâmetros de reconhecimento
-python main.py
+python master.py
 # API rodará em http://localhost:8000
 ```
 
@@ -280,9 +280,9 @@ MONGODB_URL=mongodb+srv://usuario:senha@cluster.mongodb.net/olinxplus
 ### Documentação Detalhada
 
 Consulte os READMEs específicos de cada repositório:
-- [Backend Setup](https://github.com/gibadalcin/olinxplus-backend/blob/main/README.md)
-- [Admin UI Setup](https://github.com/gibadalcin/olinxplus-adminui/blob/main/README.md)
-- [Mobile App Setup](https://github.com/gibadalcin/olinxplus/blob/main/README.md)
+- [Backend Setup](https://github.com/gibadalcin/olinxplus-backend/blob/master/README.md)
+- [Admin UI Setup](https://github.com/gibadalcin/olinxplus-adminui/blob/master/README.md)
+- [Mobile App Setup](https://github.com/gibadalcin/olinxplus/blob/master/README.md)
 
 ## 📚 Documentação
 
@@ -318,18 +318,18 @@ Acesse o índice organizado de toda a documentação técnica do projeto.
 ### 🔧 Guias Específicos de Repositório
 
 **olinxplus-backend**
-- [README Backend](https://github.com/gibadalcin/olinxplus-backend/blob/main/README.md) - Setup e deployment
-- [Crop Optimization](https://github.com/gibadalcin/olinxplus-backend/blob/main/docs/CROP-OPTIMIZATION.md) - Otimizações de reconhecimento
+- [README Backend](https://github.com/gibadalcin/olinxplus-backend/blob/master/README.md) - Setup e deployment
+- [Crop Optimization](https://github.com/gibadalcin/olinxplus-backend/blob/master/docs/CROP-OPTIMIZATION.md) - Otimizações de reconhecimento
 
 **olinxplus-adminui**
-- [Upload GLB Frontend](https://github.com/gibadalcin/olinxplus-adminui/blob/main/UPLOAD-GLB-FRONTEND.md) - Upload de modelos 3D
-- [Esquema AR](https://github.com/gibadalcin/olinxplus-adminui/blob/main/AR_SCHEMA.md) - Schema de conteúdo AR
-- [Endpoints API](https://github.com/gibadalcin/olinxplus-adminui/blob/main/ENDPOINTS.md) - Documentação da API
+- [Upload GLB Frontend](https://github.com/gibadalcin/olinxplus-adminui/blob/master/UPLOAD-GLB-FRONTEND.md) - Upload de modelos 3D
+- [Esquema AR](https://github.com/gibadalcin/olinxplus-adminui/blob/master/AR_SCHEMA.md) - Schema de conteúdo AR
+- [Endpoints API](https://github.com/gibadalcin/olinxplus-adminui/blob/master/ENDPOINTS.md) - Documentação da API
 **olinxplus (mobile)**
-- [README App](https://github.com/gibadalcin/olinxplus/blob/main/README.md) - Configuração e build
-- [Correção Delay Imagem](https://github.com/gibadalcin/olinxplus/blob/main/CORRECAO-DELAY-IMAGEM.md) - Correções de UX
-- [Teste Fluxo AR](https://github.com/gibadalcin/olinxplus/blob/main/TESTE-FLUXO-AR.md) - Validação de AR
-- [Histórico AR Android](https://github.com/gibadalcin/olinxplus/blob/main/HISTORICO-AR-ANDROID.md) - Evolução AR
+- [README App](https://github.com/gibadalcin/olinxplus/blob/master/README.md) - Configuração e build
+- [Correção Delay Imagem](https://github.com/gibadalcin/olinxplus/blob/master/CORRECAO-DELAY-IMAGEM.md) - Correções de UX
+- [Teste Fluxo AR](https://github.com/gibadalcin/olinxplus/blob/master/TESTE-FLUXO-AR.md) - Validação de AR
+- [Histórico AR Android](https://github.com/gibadalcin/olinxplus/blob/master/HISTORICO-AR-ANDROID.md) - Evolução AR
 
 ## 🔑 Funcionalidades Principais
 
@@ -382,9 +382,9 @@ services:
     source_dir: /
     github:
       repo: gibadalcin/olinxplus-backend
-      branch: main
+      branch: master
     build_command: pip install -r requirements.txt
-    run_command: uvicorn main:app --host 0.0.0.0 --port 8080
+    run_command: uvicorn master:app --host 0.0.0.0 --port 8080
     envs:
       - key: MONGODB_URL
         scope: RUN_TIME
@@ -429,7 +429,7 @@ vercel --prod
 
 ### Estrutura de Branches
 
-- `main` - Produção estável
+- `master` - Produção estável
 - `develop` - Desenvolvimento ativo
 - `feature/*` - Novas funcionalidades
 - `fix/*` - Correções de bugs
@@ -439,7 +439,7 @@ vercel --prod
 ```bash
 # Desenvolvimento local
 cd olinxplus-backend
-python main.py  # API em http://localhost:8000
+python master.py  # API em http://localhost:8000
 
 # Reindexar logos FAISS
 python faiss_index.py
@@ -498,9 +498,9 @@ Contribuições são bem-vindas! Por favor, siga estes passos:
 ## 📄 Licença
 
 Este projeto está sob a licença MIT. Veja os arquivos LICENSE em cada repositório para mais detalhes:
-- [olinxplus/LICENSE](https://github.com/gibadalcin/olinxplus/blob/main/LICENSE)
-- [olinxplus-backend/LICENSE](https://github.com/gibadalcin/olinxplus-backend/blob/main/LICENSE)
-- [olinxplus-adminui/LICENSE](https://github.com/gibadalcin/olinxplus-adminui/blob/main/LICENSE)
+- [olinxplus/LICENSE](https://github.com/gibadalcin/olinxplus/blob/master/LICENSE)
+- [olinxplus-backend/LICENSE](https://github.com/gibadalcin/olinxplus-backend/blob/master/LICENSE)
+- [olinxplus-adminui/LICENSE](https://github.com/gibadalcin/olinxplus-adminui/blob/master/LICENSE)
 
 ## 👥 Equipe
 

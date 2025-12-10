@@ -224,7 +224,7 @@
 
 ### Documentação Externa:
 - [README Principal](../README.md) - Visão geral do projeto
-- [Backend CROP-OPTIMIZATION.md](https://github.com/gibadalcin/olinxplus-backend/blob/main/docs/CROP-OPTIMIZATION.md) - Otimizações backend
+- [Backend CROP-OPTIMIZATION.md](https://github.com/gibadalcin/olinxplus-backend/blob/master/docs/CROP-OPTIMIZATION.md) - Otimizações backend
 
 ---
 
