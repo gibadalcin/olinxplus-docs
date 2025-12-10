@@ -31,19 +31,29 @@ confidence = 1 / (1 + distance)
 
 ## ✅ Solução Implementada
 
-### Backend (`faiss_index.py`):
-```python
-threshold = 0.38  # ~72.5% confidence
+### Backend (`.env` - Digital Ocean):
+```bash
+SEARCH_COMBINED_THRESHOLD=0.50  # 50% (threshold combinado CLIP+pHash)
+SEARCH_MIN_MARGIN=0.01          # 1% mínimo entre top-1 e top-2
+SEARCH_ACCEPTANCE_THRESHOLD=0.72 # 72% (confiança alta)
+SEARCH_PHASH_WEIGHT=0.20        # 20% peso pHash
+SEARCH_EMBEDDING_WEIGHT=0.80    # 80% peso CLIP
 ```
 
 **Justificativa:**
-- ✅ Aceita 73.87% (resolve o problema reportado)
-- ✅ Ainda rejeita < 72.5% (mantém qualidade)
-- ✅ Reduz falsos negativos sem aumentar muito os falsos positivos
+- ✅ Combined threshold 0.50 permite reconhecimento em condições variadas
+- ✅ Min margin 0.01 garante diferenciação mínima entre candidatos
+- ✅ Acceptance 0.72 mantém qualidade para resultados de alta confiança
+- ✅ Híbrido CLIP (80%) + pHash (20%) balanceia semântica e estrutura
 
-### Frontend (`useLogoCompare.ts`):
+### App Mobile - Crop Antes do Envio:
 ```typescript
-const SIMILARIDADE_MINIMA = 0.72;  // 72%
+// Crop guiado por marcadores visuais (300x250px)
+const croppedImage = await manipulateAsync(
+  photo.uri,
+  [{ crop: { originX, originY, width: 300, height: 250 } }],
+  { compress: 1.0, format: SaveFormat.JPEG }
+);
 ```
 
 **Justificativa:**
@@ -61,13 +71,22 @@ Falsos positivos: Baixo
 Experiência do usuário: ❌ Frustrante
 ```
 
-### Depois (threshold 0.38 / 72.5%):
+### Depois (threshold 0.50 combinado + crop app-side):
 ```
-Capturas rejeitadas: ~25%
-Falsos negativos: Médio
-Falsos positivos: Baixo-Médio
-Experiência do usuário: ✅ Melhor
+Capturas rejeitadas: ~15%
+Falsos negativos: Baixo
+Falsos positivos: Baixo
+Experiência do usuário: ✅ Muito Melhor
+Latência: ⚡ Reduzida (imagens menores, pré-cropped)
 ```
+
+**Otimizações Adicionais (Dezembro 2025):**
+- 📸 **Crop no app**: Marcadores visuais 300x250px guiam enquadramento
+- 🚫 **Backend crop desabilitado**: `SEARCH_CENTER_CROP_RATIO=1.0` (sem recrop)
+- ⚡ **Menor latência**: Imagens menores (~256x256) vs originais (1920x1080+)
+- 🎯 **Maior precisão**: Logo já enquadrado pelo usuário com marcadores
+
+**Referência:** `olinxplus-backend/docs/CROP-OPTIMIZATION.md`
 
 ## ⚠️ Riscos de Falsos Positivos
 

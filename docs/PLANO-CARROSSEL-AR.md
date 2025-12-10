@@ -1,8 +1,15 @@
 # 📋 Plano de Implementação - Carrossel AR (Option 3)
 
 **Data de criação:** 03/11/2025  
-**Status:** Preparação concluída | Implementação pendente  
+**Última atualização:** 10/12/2025  
+**Status:** ✅ Implementado e em produção  
 **Objetivo:** Permitir navegação entre múltiplos modelos 3D em AR nativa
+
+**Projeto:** Olinx Plus  
+**Repositórios:**
+- Mobile: [github.com/gibadalcin/olinxplus](https://github.com/gibadalcin/olinxplus)
+- Backend: [github.com/gibadalcin/olinxplus-backend](https://github.com/gibadalcin/olinxplus-backend)
+- Admin: [github.com/gibadalcin/olinxplus-adminui](https://github.com/gibadalcin/olinxplus-adminui)
 
 ---
 
@@ -15,7 +22,7 @@
 - ✅ Implementado `setCurrentModelIndex(index)` - Navega entre modelos
 - ✅ Helper: reset de índice ao carregar novos modelos
 
-**Localização:** `olinxra-app/context/ARPayloadContext.tsx`
+**Localização:** `olinxplus/context/ARPayloadContext.tsx`
 
 ### 2. **Bug Fix - Usuários Anônimos**
 - ✅ Removida autenticação anônima do `_layout.tsx`
@@ -24,9 +31,9 @@
 - ✅ App agora é totalmente público (sem autenticação)
 
 **Arquivos modificados:**
-- `olinxra-app/app/_layout.tsx`
-- `olinxra-app/app/(tabs)/ar-view.tsx`
-- `olinxra-backend/delete_anonymous_users.py` (novo)
+- `olinxplus/app/_layout.tsx`
+- `olinxplus/app/_tabs/ar-view.tsx`
+- `olinxplus-backend/tools/delete_anonymous_users.py`
 
 ### 3. **AdminUI - Build otimizado**
 - ✅ Upgrade React 18 → 19 (compatibilidade react-leaflet)
@@ -34,14 +41,15 @@
 - ✅ Chunking otimizado (vendor único 757KB → 218KB gzipped)
 - ✅ Removidos imports wildcard de react-icons (-5.6MB)
 - ✅ Preview funcionando sem erros de forwardRef/createContext
+- ✅ Deploy em produção (Vercel/Netlify)
 
 **Arquivos modificados:**
-- `olinxra-adminui/package.json` (React 19)
-- `olinxra-adminui/vite.config.js` (chunking simplificado)
-- `olinxra-adminui/src/App.jsx` (lazy routes)
-- `olinxra-adminui/src/hooks/useImages.js` (imports estáticos)
-- `olinxra-adminui/src/components/imageContext/ImageCard.jsx` (imports estáticos)
-- `olinxra-adminui/src/components/contentContext/ContentBlockType.jsx` (sem wildcard icons)
+- `olinxplus-adminui/package.json` (React 19)
+- `olinxplus-adminui/vite.config.js` (chunking simplificado)
+- `olinxplus-adminui/src/App.jsx` (lazy routes)
+- `olinxplus-adminui/src/hooks/useImages.js` (imports estáticos)
+- `olinxplus-adminui/src/components/imageContext/ImageCard.jsx` (imports estáticos)
+- `olinxplus-adminui/src/components/contentContext/ContentBlockType.jsx` (sem wildcard icons)
 
 ---
 

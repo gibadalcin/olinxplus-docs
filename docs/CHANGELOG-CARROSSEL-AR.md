@@ -1,10 +1,13 @@
 # 📝 Changelog - Carrossel AR (Option 3)
 
+**Projeto:** Olinx Plus  
+**Repositório:** [github.com/gibadalcin/olinxplus-backend](https://github.com/gibadalcin/olinxplus-backend)
+
 ## ✅ Implementado - 03/11/2025
 
 ### FASE 1 - Backend: Pré-geração automática de GLBs
 
-#### Arquivo modificado: `olinxra-backend/main.py`
+#### Arquivo modificado: `olinxplus-backend/main.py`
 
 **1. Função `gerar_signed_url_conteudo` atualizada**
 - ✅ Adicionado parâmetro `expiration` (padrão: 3600s = 1h)

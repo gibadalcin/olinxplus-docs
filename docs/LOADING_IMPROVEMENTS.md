@@ -18,12 +18,14 @@ O carregamento de conteúdo após reconhecimento da logo estava demorando vário
 // Ao buscar conteúdo:
 1. Verifica cache local primeiro (super rápido)
 2. Se encontrar e não estiver expirado → retorna imediatamente
-3. Se não encontrar → busca do backend e salva no cache
+3. Se não encontrar → busca do backend (Digital Ocean) e salva no cache
 ```
 
 **Exemplo de ganho:**
 - **Sem cache:** 3-5 segundos (busca backend + múltiplas tentativas)
 - **Com cache:** 50-200ms (leitura local)
+
+**Hosting:** Backend hospedado no **Digital Ocean App Platform** (NYC region) para baixa latência
 
 ---
 

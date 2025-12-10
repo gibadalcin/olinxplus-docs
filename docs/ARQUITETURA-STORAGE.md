@@ -1,4 +1,4 @@
-# 📁 Arquitetura de Armazenamento - OlinxRA
+# 📁 Arquitetura de Armazenamento - Olinx Plus
 
 ## Estrutura de Pastas no GCS (Google Cloud Storage)
 

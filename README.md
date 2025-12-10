@@ -286,6 +286,9 @@ Consulte os READMEs específicos de cada repositório:
 
 ## 📚 Documentação
 
+### 📑 [Índice Completo de Documentação](docs/INDEX.md)
+Acesse o índice organizado de toda a documentação técnica do projeto.
+
 ### 📖 Documentos Técnicos (olinxplus-docs/docs)
 
 **Arquitetura e Design**
@@ -302,9 +305,9 @@ Consulte os READMEs específicos de cada repositório:
 - [Acesso GLB App](docs/ACESSO-GLB-APP.md) - Como o app acessa modelos 3D
 
 **Otimizações e Performance**
-- [Calibração de Threshold](docs/THRESHOLD_CALIBRATION.md) - Calibração de reconhecimento
-- [Loading Improvements](docs/LOADING_IMPROVEMENTS.md) - Otimizações de carregamento
-- [Correção Delay Imagem](docs/CORRECAO-DELAY-IMAGEM.md) - Correções de delay
+- [Calibração de Threshold](docs/THRESHOLD_CALIBRATION.md) - Calibração de reconhecimento CLIP+FAISS
+- [Crop Optimization Mobile](docs/CROP-OPTIMIZATION-MOBILE.md) - Otimização de crop com marcadores visuais
+- [Loading Improvements](docs/LOADING_IMPROVEMENTS.md) - Otimizações de carregamento e cache
 
 **Changelogs e Testes**
 - [Changelog Carrossel AR](docs/CHANGELOG-CARROSSEL-AR.md)

@@ -25,12 +25,12 @@ gs://olinxra-conteudo/TR77xSOJ.../totem_header.jpg
 # 2. Gerar GLB
 gs://olinxra-conteudo/TR77xSOJ.../ra/models/totem_header.glb
 
-# 3. Gerar Signed URL (válida por 365 dias)
+# 3. Gerar Signed URL (válida por 7 dias padrão, 365 dias para assets principais)
 https://storage.googleapis.com/olinxra-conteudo/TR77xSOJ.../ra/models/totem_header.glb?
   X-Goog-Algorithm=GOOG4-RSA-SHA256&
   X-Goog-Credential=...&
-  X-Goog-Date=20251103T...&
-  X-Goog-Expires=31536000&  ← 365 dias (1 ano)
+  X-Goog-Date=20251210T...&
+  X-Goog-Expires=604800&  ← 7 dias (padrão) ou 31536000 (1 ano para assets críticos)
   X-Goog-Signature=...
 ```
 
@@ -85,8 +85,15 @@ import { ARLauncher } from '@/components/ar';
 // Usar signed URL para carregar modelo
 const glbUrl = payload.blocos[0].glb_signed_url;
 
-// Launcher AR nativo (SceneView / ARCore)
+// Launcher AR nativo (Expo GL + React Three Fiber)
+// Suporte a ARCore (Android) e ARKit (iOS)
 <ARLauncher modelUrl={glbUrl} />
+```
+
+**Repositórios:**
+- Mobile: [github.com/gibadalcin/olinxplus](https://github.com/gibadalcin/olinxplus)
+- Backend: [github.com/gibadalcin/olinxplus-backend](https://github.com/gibadalcin/olinxplus-backend)
+- Admin: [github.com/gibadalcin/olinxplus-adminui](https://github.com/gibadalcin/olinxplus-adminui)
 ```
 
 ---

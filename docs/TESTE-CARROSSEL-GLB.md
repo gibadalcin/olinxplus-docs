@@ -1,18 +1,24 @@
 # 🧪 Guia de Teste - Pré-geração de GLB
 
+**Projeto:** Olinx Plus  
+**Backend:** Digital Ocean App Platform  
+**Repositório:** [github.com/gibadalcin/olinxplus-backend](https://github.com/gibadalcin/olinxplus-backend)
+
 ## Pré-requisitos
-- Backend rodando: `python run.py` em `olinxra-backend/`
-- Firebase Admin SDK configurado
-- GCS buckets configurados (logos e conteudo)
+- Backend rodando: `python main.py` em `olinxplus-backend/`
+- Firebase Admin SDK configurado (`firebase-cred.json`)
+- GCS buckets configurados: `olinxra-logos` e `olinxra-conteudo`
+- Credenciais GCS (`cloud-storage-cred.json`)
 - Usuário autenticado no AdminUI
 
 ---
 
 ## Teste 1: Upload de imagem com pré-geração de GLB
 
-### Método Manual (Postman/Insomnia)
+### Método Manual (Postman/Insomnia/curl)
 
-**Endpoint:** `POST http://localhost:8000/api/add-content-image`
+**Endpoint:** `POST http://localhost:8000/api/add-content-image`  
+**Produção:** `POST https://your-app.ondigitalocean.app/api/add-content-image`
 
 **Headers:**
 ```

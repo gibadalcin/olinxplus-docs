@@ -1,8 +1,8 @@
-# 🔐 Duas Camadas de Acesso - OlinxRA
+# 🔐 Duas Camadas de Acesso - Olinx Plus
 
 ## Visão Geral
 
-O sistema OlinxRA possui **duas camadas de acesso completamente separadas**:
+O sistema Olinx Plus possui **duas camadas de acesso completamente separadas**:
 
 1. **🔐 AdminUI (Autenticado)** - Gerenciamento de conteúdo
 2. **🌐 App Mobile (Público)** - Visualização de conteúdo

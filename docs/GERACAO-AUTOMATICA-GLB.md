@@ -8,9 +8,11 @@ O sistema agora **gera GLBs automaticamente** ao fazer upload de imagens, garant
 
 ## ✅ **Como o Sistema Funciona**
 
-### **1. Upload de Imagem** (`/admin/add-content-image`)
+### **1. Upload de Imagem** (`/api/add-content-image`)
 
 Quando uma imagem é enviada pelo AdminUI:
+
+**Nota:** No app mobile, as imagens são **pré-cropped** (300x250px) antes do upload para otimizar reconhecimento.
 
 ```python
 # main.py - linhas 2915-2970
